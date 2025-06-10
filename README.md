@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FF14 Rotation Simulator
 
-## Getting Started
+## 概要
 
-First, run the development server:
+FF14 Rotation Simulatorは、ファイナルファンタジーXIVのスキル回しを視覚的にシミュレートし、DPS最適化を支援するWebアプリケーションです。全ジョブに対応し、タイムライン表示と時間あたりの威力計算機能を提供します。
+
+## 主な機能（予定）
+
+- **タイムライン表示**: スキル回しを時系列で視覚的に表示
+- **DPS計算**: タイムラインの特定区間を選択し、その時間内での秒間威力を計算
+- **全ジョブ対応**: すべての戦闘ジョブのスキルセットに対応
+- **バフ・デバフ管理**: 各種バフ・デバフの効果を考慮した威力計算
+
+## 技術スタック
+
+- **フレームワーク**: Next.js 15
+- **言語**: TypeScript
+- **スタイリング**: Tailwind CSS
+- **データ管理**: JSON形式でのスキルデータ管理
+
+## 開発環境のセットアップ
+
+### 必要な環境
+
+- Node.js 18.17以上
+- npm または yarn
+
+### インストール
+
+```bash
+git clone https://github.com/Sakuya398-Yamada/ff14-rotation-sim.git
+cd ff14-rotation-sim
+npm install
+```
+
+### 開発サーバーの起動
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いてアプリケーションにアクセスします。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## プロジェクト構造
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+ff14-rotation-sim/
+├── src/
+│   ├── app/          # Next.js App Router
+│   ├── components/   # Reactコンポーネント
+│   ├── data/         # スキルデータ（JSON）
+│   ├── types/        # TypeScript型定義
+│   └── utils/        # ユーティリティ関数
+├── public/           # 静的ファイル
+└── package.json
+```
 
-## Learn More
+## 開発状況
 
-To learn more about Next.js, take a look at the following resources:
+現在、プロジェクトは初期開発段階です。基本的な機能の実装を進めています。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ロードマップ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [ ] 基本的なUIの実装
+- [ ] スキルデータの構造定義
+- [ ] タイムライン表示機能
+- [ ] DPS計算機能
+- [ ] 各ジョブのスキルデータ実装
+- [ ] バフ・デバフシステム
+- [ ] データのインポート/エクスポート機能
 
-## Deploy on Vercel
+## 貢献について
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+現在は個人開発プロジェクトですが、将来的にコントリビューションを受け付ける予定です。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ライセンス
+
+本プロジェクトはMITライセンスの下で公開予定ですが、ファイナルファンタジーXIVの利用規約との整合性を確認中です。
+
+## 注意事項
+
+- このプロジェクトは非公式のツールです
+- ファイナルファンタジーXIVは株式会社スクウェア・エニックスの登録商標です
+- ゲーム内のデータや画像の使用については、公式の利用規約に従います
+
+## 連絡先
+
+質問や提案がある場合は、[Issues](https://github.com/Sakuya398-Yamada/ff14-rotation-sim/issues) までお願いします。
